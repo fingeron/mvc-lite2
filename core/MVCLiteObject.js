@@ -1,12 +1,12 @@
 (function(global) {
-    var MVCLiteObject = function(options) {
-        this.name = options.name;
+    var MVCLiteObject = function(name) {
+        this._name = name;
     };
 
     MVCLiteObject.prototype = {
         error: function(msg) {
             throw {
-                name: '[' + this.name + 'Error]',
+                name: this._name + 'Error',
                 message: msg,
                 data: this
             };
@@ -18,6 +18,5 @@
         obj.prototype.constructor = obj;
     };
 
-    global.App.Core = global.App.Core || {};
     global.App.Core.MVCLiteObject = MVCLiteObject;
 })(window);

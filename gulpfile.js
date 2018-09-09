@@ -9,3 +9,7 @@ gulp.task('build', function() {
         .pipe(concat('mvc-lite.js'))
         .pipe(gulp.dest('./'));
 });
+
+gulp.task('watch', function() {
+    gulp.watch('./core/*.js', ['build']);
+});
