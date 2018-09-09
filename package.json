@@ -1,0 +1,15 @@
+{
+  "name": "mvc-lite",
+  "version": "1.0.0",
+  "description": "Single Page Application Development Platform (ES5 exclusive)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fingeron",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  }
+}
