@@ -7,7 +7,7 @@ gulp.task('build', function() {
     return gulp
         .src(CONFIG.BuildOrder)
         .pipe(concat('mvc-lite.js'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('watch', function() {

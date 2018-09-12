@@ -1,7 +1,0 @@
-{
-  "BuildOrder": [
-    "core/MVCLite.js",
-    "core/MVCLiteObject.js",
-    "core/DynamicNode.js"
-  ]
-}
