@@ -3,8 +3,15 @@
 <head>
     <title>MVC-Lite Development Project</title>
     <script src="./dist/mvc-lite.js"></script>
+    <script src="./dist/app.js"></script>
 </head>
 <body>
+    <app>Loading...</app>
 
+    <script>
+        (function(global) {
+            global.App.Bootstrap('app');
+        })(window);
+    </script>
 </body>
 </html>

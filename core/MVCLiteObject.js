@@ -3,20 +3,20 @@
         this._name = name;
     };
 
-    MVCLiteObject.prototype = {
-        error: function(msg) {
-            throw {
-                name: this._name + 'Error',
-                message: msg,
-                data: this
-            };
-        }
-    };
-
+    // Static functions
     MVCLiteObject.inherits = function(obj) {
         obj.prototype = Object.create(MVCLiteObject.prototype);
         obj.prototype.constructor = obj;
     };
 
-    global.App.Core.MVCLiteObject = MVCLiteObject;
+    // Object functions
+    MVCLiteObject.prototype.error = function(msg) {
+        throw {
+            name: this._name + 'Error',
+            message: msg,
+            data: this
+        };
+    };
+
+    global.App.CreateEntity(MVCLiteObject);
 })(window);
