@@ -19,5 +19,6 @@ gulp.task('build-app', function() {
 
 gulp.task('watch', function() {
     gulp.watch('./core/**/*.js', ['build']);
+    gulp.watch('./utilities/**/*.js', ['build']);
     gulp.watch(CONFIG.AppFilesPath, ['build-app']);
 });

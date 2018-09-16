@@ -1,8 +1,11 @@
 (function(global) {
     var App = {
+        Utilities: {},
         Entities: {},
         Components: {},
 
+        /* Add an entity to framework pool */
+        AddUtility: addUtility,
         /* Add an entity to framework pool */
         CreateEntity: addEntity,
         /* Create a component in framework */
@@ -13,6 +16,10 @@
 
     function addEntity(entity) {
         App.Entities[entity.name] = entity;
+    }
+
+    function addUtility(utility) {
+        App.Utilities[utility.name] = utility;
     }
 
     function createComponent(options) {
